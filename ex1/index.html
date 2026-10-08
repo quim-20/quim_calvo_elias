@@ -1,0 +1,40 @@
+
+<!--                            
+                            
+El mètode GET fa que les dades que introdueix l'usuari 
+s'envien cap al servidor a través de la direcció URL, als paràmetres.
+
+Mentre que el mètode POST envia els parámetres cap al servidor 
+en una sol·licitut HTTP.
+
+Aquest mètode té moltes més avantatges que el GET:
+En temes de seguretat,les dades que l'usuari introdueix seràn invisibles
+al transportar-les cap al servidor, i té un nombre il·limitat de carácters a enviar.
+
+Tot i així, he utilitzat el mètode GET en tots els casos, perquè les dades que s'introdueixen
+a les activitats no son sensibles, i al ser un host local, no suposa un risc perquè
+ningú está veient el tràfic de les dades, tot i que els registres de les dades
+es guarden a la màquina.
+
+Tots dos mètodes funcionen a les mateixes circumstàncies, 
+en aquests casos en específic.
+-->
+
+
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Formulari de contacte</h1>
+    <form action="logic.php" method="get">
+        Nombre: <input type="text" name="nombre"><br>
+        Apellidos: <input type="text" name="apellidos"><br>
+        Email: <input type="text" name="email"><br>
+        Mensaje: <textarea name="mensaje" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
